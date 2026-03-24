@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "eleventy --serve",
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://REMOVED@github.com/btorio15/PersonalSite.git"
+    "url": "git+https://github.com/btorio15/PersonalSite.git"
   },
   "keywords": [],
   "author": "",
