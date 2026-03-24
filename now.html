@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Now – Benjamin Torio</title>
+
+  <script>
+    const t = localStorage.getItem('theme');
+    if (t) document.documentElement.setAttribute('data-bs-theme', t);
+  </script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+    <link rel="stylesheet" href="/now.css">
+  
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="/index.html">Benjamin Torio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link " href="/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link " href="/hobbies.html">Hobbies</a></li>
+        <li class="nav-item"><a class="nav-link " href="/projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link " href="/resume.html">Resume</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/now.html">Now</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <button id="theme-toggle" class="btn btn-sm btn-outline-light" aria-label="Toggle dark mode">🌙</button>
+        <img src="/resources/img/mountain.png" alt="Profile" height="40" class="rounded-circle">
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container mt-5" style="max-width: 760px;">
+
+  <h2 class="mb-1">Now</h2>
+  <p class="text-secondary mb-5">A running log of what I'm working on and thinking about.</p>
+
+  <ul class="timeline">
+
+    <!-- Add new entries at the TOP -->
+
+    <li class="timeline-entry">
+      <time class="timeline-date">March 2026</time>
+      <h3 class="timeline-title">Adding dark mode &amp; a "Now" page to this site</h3>
+      <p class="timeline-body">
+        Working on leveling up my personal site with a dark/light mode toggle and this very page.
+        Keeping it minimal — no frameworks beyond Bootstrap.
+      </p>
+    </li>
+
+    <li class="timeline-entry">
+      <time class="timeline-date">February 2026</time>
+      <h3 class="timeline-title">Online Calendar project</h3>
+      <p class="timeline-body">
+        Built a browser-based calendar with HTML, CSS, and JS. Planning to add event deletion,
+        time sorting, and local storage persistence next.
+      </p>
+    </li>
+
+    <li class="timeline-entry">
+      <time class="timeline-date">Fall 2025</time>
+      <h3 class="timeline-title">CU Boulder — Computer Science coursework</h3>
+      <p class="timeline-body">
+        Continuing toward my B.S. in CS. Focused on data structures, algorithms, and building
+        more complex projects to add to my portfolio.
+      </p>
+    </li>
+
+  </ul>
+</div>
+
+<footer class="bg-primary text-center text-white mt-5 p-4">
+  <p>Connect with me:</p>
+  <a href="https://github.com/btorio15" class="text-white me-3"><i class="fab fa-github fa-2x"></i></a>
+  <a href="https://www.linkedin.com/in/benjamin-torio" class="text-white me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+  <p class="mt-3 mb-0">© 2026 Benjamin Torio</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/theme.js"></script>
+</body>
+</html>
