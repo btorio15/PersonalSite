@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }} – Benjamin Torio</title>
+
+  <script>
+    const t = localStorage.getItem('theme');
+    if (t) document.documentElement.setAttribute('data-bs-theme', t);
+  </script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  {% if extraCss %}
+    <link rel="stylesheet" href="{{ extraCss }}">
+  {% endif %}
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="/index.html">Benjamin Torio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link {% if page.url == '/index.html' %}active{% endif %}" href="/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link {% if page.url == '/hobbies.html' %}active{% endif %}" href="/hobbies.html">Hobbies</a></li>
+        <li class="nav-item"><a class="nav-link {% if page.url == '/projects.html' %}active{% endif %}" href="/projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link {% if page.url == '/resume.html' %}active{% endif %}" href="/resume.html">Resume</a></li>
+        <li class="nav-item"><a class="nav-link {% if page.url == '/now.html' %}active{% endif %}" href="/now.html">Now</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <button id="theme-toggle" class="btn btn-sm btn-outline-light" aria-label="Toggle dark mode">🌙</button>
+        <img src="/resources/img/mountain.png" alt="Profile" height="40" class="rounded-circle">
+      </div>
+    </div>
+  </div>
+</nav>
+
+{{ content | safe }}
+
+<footer class="bg-primary text-center text-white mt-5 p-4">
+  <p>Connect with me:</p>
+  <a href="https://github.com/btorio15" class="text-white me-3"><i class="fab fa-github fa-2x"></i></a>
+  <a href="https://www.linkedin.com/in/benjamin-torio" class="text-white me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+  <p class="mt-3 mb-0">© 2026 Benjamin Torio</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/theme.js"></script>
+</body>
+</html>
