@@ -20,21 +20,21 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
-    <a class="navbar-brand" href="/index.html">Benjamin Torio</a>
+    <a class="navbar-brand" href="{{ '/' | url }}">Benjamin Torio</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link {% if page.url == '/index.html' %}active{% endif %}" href="/index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link {% if page.url == '/hobbies.html' %}active{% endif %}" href="/hobbies.html">Hobbies</a></li>
-        <li class="nav-item"><a class="nav-link {% if page.url == '/projects.html' %}active{% endif %}" href="/projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link {% if page.url == '/resume.html' %}active{% endif %}" href="/resume.html">Resume</a></li>
-        <li class="nav-item"><a class="nav-link {% if page.url == '/now.html' %}active{% endif %}" href="/now.html">Now</a></li>
+        <a class="nav-link" href="{{ '/index.html' | url }}">Home</a>
+        <a class="nav-link" href="{{ '/hobbies.html' | url }}">Hobbies</a>
+        <a class="nav-link" href="{{ '/projects.html' | url }}">Projects</a>
+        <a class="nav-link" href="{{ '/resume.html' | url }}">Resume</a>
+        <a class="nav-link" href="{{ '/now.html' | url }}">Now</a>
       </ul>
       <div class="d-flex align-items-center gap-3">
         <button id="theme-toggle" class="btn btn-sm btn-outline-light" aria-label="Toggle dark mode">🌙</button>
-        <img src="/resources/img/mountain.png" alt="Profile" height="40" class="rounded-circle">
+            <img src="{{ '/resources/img/mountain.png' | url }}" alt="Profile" height="40" class="rounded-circle">
       </div>
     </div>
   </div>
@@ -50,6 +50,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/theme.js"></script>
+<script src="{{ '/theme.js' | url }}"></script>
 </body>
 </html>
