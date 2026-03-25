@@ -3,6 +3,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("resume.css");
   eleventyConfig.addPassthroughCopy("theme.js");
   eleventyConfig.addPassthroughCopy("now.css");
+  eleventyConfig.addPassthroughCopy("style.css");
 
   return {
     pathPrefix: "/PersonalSite/",
