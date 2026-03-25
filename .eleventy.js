@@ -1,3 +1,5 @@
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("resources");
   eleventyConfig.addPassthroughCopy("resume.css");
@@ -6,7 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("style.css");
 
   return {
-    pathPrefix: "/PersonalSite/",
+    pathPrefix: isProduction ? "/PersonalSite/" : "/",
     dir: {
       input: "src",
       includes: "../_includes",
